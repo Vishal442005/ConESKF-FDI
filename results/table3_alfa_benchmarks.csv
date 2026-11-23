@@ -1,0 +1,48 @@
+Flight,Category,Duration_s,Onset_s,Detected_s,TTD_s,MaxWealth,FalseAlarm,Latency_us
+carbonZ_2018-07-18-12-10-11_no_ground_truth,Healthy,205.15,N/A,None,None,17.31,FALSE,40.18
+carbonZ_2018-07-18-15-53-31_1_engine_failure,Engine Failure,132.10,116.17,None,None,2.48,FALSE,38.05
+carbonZ_2018-07-18-15-53-31_2_engine_failure,Engine Failure,88.68,73.26,None,None,18.55,FALSE,37.83
+carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj,Engine Failure,132.09,116.59,None,None,14.89,FALSE,37.30
+carbonZ_2018-07-18-16-37-39_1_no_failure,Healthy,30.19,N/A,None,None,1.42,FALSE,27.76
+carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj,Engine Failure,130.23,113.98,None,None,1.00,FALSE,38.50
+carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj,Engine Failure,142.00,122.84,16.08,None,28.88,TRUE,1.80
+carbonZ_2018-07-30-16-39-00_1_engine_failure,Engine Failure,131.28,116.63,None,None,19.03,FALSE,38.35
+carbonZ_2018-07-30-16-39-00_2_engine_failure,Engine Failure,106.21,91.29,None,None,1.38,FALSE,37.06
+carbonZ_2018-07-30-16-39-00_3_no_failure,Healthy,79.04,N/A,None,None,1.21,FALSE,37.94
+carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj,Engine Failure,132.90,116.96,None,None,21.07,FALSE,37.70
+carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj,Engine Failure,106.49,87.45,None,None,10.02,FALSE,37.05
+carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj,Engine Failure,156.79,133.17,14.43,None,25.42,TRUE,1.39
+carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj,Engine Failure,112.38,90.05,None,None,12.95,FALSE,39.05
+carbonZ_2018-09-11-11-56-30_engine_failure,Engine Failure,124.08,103.50,None,None,1.13,FALSE,38.96
+carbonZ_2018-09-11-14-16-55_no_failure,Healthy,33.33,N/A,None,None,1.15,FALSE,27.32
+carbonZ_2018-09-11-14-22-07_1_engine_failure,Engine Failure,114.02,104.84,None,None,11.50,FALSE,39.52
+carbonZ_2018-09-11-14-22-07_2_engine_failure,Engine Failure,62.15,49.89,None,None,2.48,FALSE,33.86
+carbonZ_2018-09-11-14-41-38_no_failure,Healthy,42.95,N/A,None,None,1.00,FALSE,30.20
+carbonZ_2018-09-11-14-41-51_elevator_failure,Elevator Actuator Jam,128.39,117.78,None,None,3.70,FALSE,38.80
+carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure,Aileron Actuator Jam,233.15,105.17,15.71,None,26.18,TRUE,1.36
+carbonZ_2018-09-11-15-05-11_1_elevator_failure,Elevator Actuator Jam,75.84,63.45,None,None,1.09,FALSE,37.83
+carbonZ_2018-09-11-15-05-11_2_no_failure,Healthy,67.29,N/A,None,None,1.22,FALSE,33.04
+carbonZ_2018-09-11-15-06-34_1_rudder_right_failure,Rudder Actuator Jam,70.22,55.44,16.96,None,25.33,TRUE,4.63
+carbonZ_2018-09-11-15-06-34_2_rudder_right_failure,Rudder Actuator Jam,68.85,51.88,None,None,7.84,FALSE,37.05
+carbonZ_2018-09-11-15-06-34_3_rudder_left_failure,Rudder Actuator Jam,69.10,60.09,None,None,1.00,FALSE,35.78
+carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure,Aileron Actuator Jam,143.44,116.14,None,None,2.18,FALSE,37.91
+carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure,Aileron Actuator Jam,101.57,65.65,None,None,4.21,FALSE,35.41
+carbonZ_2018-09-11-17-55-30_1_right_aileron_failure,Aileron Actuator Jam,133.11,111.91,None,None,8.51,FALSE,38.60
+carbonZ_2018-09-11-17-55-30_2_left_aileron_failure,Aileron Actuator Jam,81.23,49.90,None,None,1.24,FALSE,36.57
+carbonZ_2018-10-05-14-34-20_1_no_failure,Healthy,66.42,N/A,None,None,1.75,FALSE,33.72
+carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj,Aileron Actuator Jam,162.02,151.86,35.64,None,27.18,TRUE,6.62
+carbonZ_2018-10-05-14-37-22_1_no_failure,Healthy,72.65,N/A,None,None,1.31,FALSE,35.51
+carbonZ_2018-10-05-14-37-22_2_right_aileron_failure,Aileron Actuator Jam,144.79,73.39,None,None,2.38,FALSE,38.98
+carbonZ_2018-10-05-14-37-22_3_left_aileron_failure,Aileron Actuator Jam,96.28,72.02,None,None,8.61,FALSE,36.81
+carbonZ_2018-10-05-15-52-12_1_no_failure,Healthy,89.48,N/A,None,None,6.09,FALSE,36.84
+carbonZ_2018-10-05-15-52-12_2_no_failure,Healthy,48.25,N/A,None,None,1.47,FALSE,31.57
+carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj,Engine Failure,66.25,49.05,32.26,None,26.91,TRUE,14.79
+carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj,Engine Failure,113.11,99.81,None,None,1.75,FALSE,39.64
+carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj,Engine Failure,91.99,75.82,29.98,None,25.68,TRUE,9.09
+carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj,Engine Failure,116.19,104.13,None,None,3.11,FALSE,40.51
+carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj,Engine Failure,122.48,111.12,None,None,6.62,FALSE,38.21
+carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj,Engine Failure,114.26,100.18,None,None,22.64,FALSE,38.32
+carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj,Engine Failure,117.74,98.15,None,None,3.69,FALSE,39.51
+carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj,Engine Failure,108.95,101.00,None,None,7.69,FALSE,38.08
+carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj,Engine Failure,116.40,102.45,None,None,17.75,FALSE,37.58
+carbonZ_2018-10-18-11-08-24_no_failure,Healthy,26.25,N/A,None,None,1.54,FALSE,25.93

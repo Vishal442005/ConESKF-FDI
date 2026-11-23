@@ -1,0 +1,5 @@
+std_msgs/Header header
+geometry_msgs/PoseWithCovariance pose
+float64 conformal_radius_rho
+float64 empirical_coverage
+bool is_certified

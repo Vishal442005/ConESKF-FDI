@@ -1,0 +1,7 @@
+std_msgs/Header header
+string modality_id
+float64 whitened_norm
+float64 adaptive_quantile
+float64 inflation_factor
+float64 martingale_wealth
+bool is_quarantined

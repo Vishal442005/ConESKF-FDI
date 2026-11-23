@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering
+\caption{Comparative Benchmark on EuRoC MAV MH\_01\_easy (37,716 Real IMU \& 3,099 Millimeter Ground Truth Ticks)}
+\label{tab:euroc_benchmarks}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Scenario} & \textbf{Estimator} & \textbf{ATE RMSE} & \textbf{ATE Max} & \textbf{Tube Coverage} & \textbf{TTD} & \textbf{False} & \textbf{Latency} \\
+& & \textbf{[m]} & \textbf{[m]} & \textbf{$(1-\alpha=0.95)$} & \textbf{[s]} & \textbf{Alarm} & \textbf{[$\mu$s]} \\
+\midrule
+\multicolumn{8}{l}{\textbf{Scenario 0: Nominal Clean Flight (Stationary Rest to High-Speed Translation)}} \\
+Standard $\chi^2$ ESKF (B1) & & 0.1049 & 0.4626 & 90.4\% & -- & FALSE & 3.01 \\
+Huber Robust ESKF (B2) & & 0.1072 & 0.5943 & 90.3\% & -- & FALSE & 2.51 \\
+Variational Bayes ESKF (B3) & & 0.0943 & 0.5649 & 91.1\% & -- & FALSE & 4.32 \\
+$\chi^2$-CUSUM ESKF (B4) & & 0.1049 & 0.4626 & 90.4\% & -- & FALSE & 2.98 \\
+Static Conformal ESKF (B5) & & 0.1049 & 0.4626 & 90.4\% & -- & FALSE & 3.13 \\
+\textbf{Proposed ConESKF-FDI (B6)} & & \textbf{0.1073} & \textbf{0.5942} & \textbf{90.6\%} & \textbf{--} & FALSE & \textbf{3.24} \\
+\midrule
+\multicolumn{8}{l}{\textbf{Scenario 1: Heavy-Tailed NLoS Multipath Bursts (15\% Cauchy Injection, $\gamma=2.5$ m)}} \\
+Standard $\chi^2$ ESKF (B1) & & 0.1117 & 0.5174 & 89.8\% & -- & FALSE & 2.53 \\
+Huber Robust ESKF (B2) & & 0.1256 & 0.6793 & 91.3\% & -- & FALSE & 3.04 \\
+Variational Bayes ESKF (B3) & & 0.1017 & 0.6090 & 90.5\% & -- & FALSE & 4.51 \\
+$\chi^2$-CUSUM ESKF (B4) & & 8.0e+04 & 1.8e+05 & 26.3\% & -- & \textcolor{red}{\textbf{TRUE}} & 2.71 \\
+Static Conformal ESKF (B5) & & 0.1131 & 0.5304 & 90.3\% & -- & FALSE & 3.27 \\
+\textbf{Proposed ConESKF-FDI (B6)} & & \textbf{1.0202} & \textbf{6.5881} & \textbf{93.0\%} & \textbf{--} & FALSE & \textbf{3.63} \\
+\midrule
+\multicolumn{8}{l}{\textbf{Scenario 2: Stealth GNSS Ramp Spoofing ($0.15$ m/s Slow Drift vs. Secondary Aiding)}} \\
+Standard $\chi^2$ ESKF (B1) & & 14.7906 & 27.6265 & 68.5\% & -- & FALSE & 3.31 \\
+Huber Robust ESKF (B2) & & 9.8138 & 30.7053 & 74.5\% & -- & FALSE & 3.97 \\
+Variational Bayes ESKF (B3) & & 14.7812 & 27.6339 & 71.3\% & -- & FALSE & 6.39 \\
+$\chi^2$-CUSUM ESKF (B4) & & 2,888.4 & 7,729.4 & 86.4\% & 4.45 & FALSE & 2.75 \\
+Static Conformal ESKF (B5) & & 14.7709 & 27.6136 & 68.4\% & -- & FALSE & 3.72 \\
+\textbf{Proposed ConESKF-FDI (B6)} & & \textbf{0.1350} & \textbf{0.4979} & \textbf{92.2\%} & \textbf{4.05} & FALSE & \textbf{4.18} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

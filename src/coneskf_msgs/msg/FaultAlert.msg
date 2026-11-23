@@ -1,0 +1,6 @@
+std_msgs/Header header
+string modality_id
+string fault_type
+float64 stopping_time_s
+float64 martingale_value
+float64 threshold_lambda

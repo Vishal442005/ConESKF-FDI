@@ -1,0 +1,51 @@
+# ROS 2 & Colcon build artifacts
+build/
+install/
+log/
+colcon.meta
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+
+# Large raw dataset binaries (>100MB blocked by GitHub)
+*.bag
+*.zip
+*.tar.gz
+*.tar.xz
+data/alfa/extracted/
+data/alfa/processed.zip
+data/euroc/MH_01_easy.bag
+
+# LaTeX compilation temporaries (preserve final PDF and figures)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+paper/page-*.png
+paper/final_*.png
+paper/p*.png
+paper/page_*_rendered.png
+paper/pdf_pages/
+results/figures/crop_*.png
+results/figures/test_*.png
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

@@ -1,0 +1,378 @@
+[
+  {
+    "flight": "carbonZ_2018-07-18-12-10-11_no_ground_truth",
+    "type": "Healthy / Normal",
+    "samples": 526,
+    "duration_s": 205.2,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-18-15-53-31_1_engine_failure",
+    "type": "Engine",
+    "samples": 328,
+    "duration_s": 132.23,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-18-15-53-31_2_engine_failure",
+    "type": "Engine",
+    "samples": 226,
+    "duration_s": 88.5,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 328,
+    "duration_s": 132.46,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-18-16-37-39_1_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 76,
+    "duration_s": 30.01,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 318,
+    "duration_s": 129.99,
+    "hz": 2.4,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 360,
+    "duration_s": 141.9,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-16-39-00_1_engine_failure",
+    "type": "Engine",
+    "samples": 332,
+    "duration_s": 131.09,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-16-39-00_2_engine_failure",
+    "type": "Engine",
+    "samples": 272,
+    "duration_s": 105.8,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-16-39-00_3_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 200,
+    "duration_s": 78.54,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 341,
+    "duration_s": 132.79,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 264,
+    "duration_s": 106.31,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 387,
+    "duration_s": 156.4,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 281,
+    "duration_s": 112.29,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-11-56-30_engine_failure",
+    "type": "Engine",
+    "samples": 317,
+    "duration_s": 124.12,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-16-55_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 88,
+    "duration_s": 33.0,
+    "hz": 2.7,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+    "type": "Engine",
+    "samples": 279,
+    "duration_s": 113.88,
+    "hz": 2.4,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-22-07_2_engine_failure",
+    "type": "Engine",
+    "samples": 157,
+    "duration_s": 62.25,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-41-38_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 112,
+    "duration_s": 43.01,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-41-51_elevator_failure",
+    "type": "Elevator",
+    "samples": 327,
+    "duration_s": 128.23,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+    "type": "Aileron",
+    "samples": 574,
+    "duration_s": 233.16,
+    "hz": 2.5,
+    "fail_onset_s": 176.68
+  },
+  {
+    "flight": "carbonZ_2018-09-11-15-05-11_1_elevator_failure",
+    "type": "Elevator",
+    "samples": 197,
+    "duration_s": 75.67,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-15-05-11_2_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 174,
+    "duration_s": 66.74,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure",
+    "type": "Rudder",
+    "samples": 177,
+    "duration_s": 69.86,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure",
+    "type": "Rudder",
+    "samples": 178,
+    "duration_s": 69.06,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure",
+    "type": "Rudder",
+    "samples": 181,
+    "duration_s": 69.31,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+    "type": "Aileron",
+    "samples": 372,
+    "duration_s": 143.16,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure",
+    "type": "Aileron",
+    "samples": 263,
+    "duration_s": 101.43,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+    "type": "Aileron",
+    "samples": 342,
+    "duration_s": 132.93,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure",
+    "type": "Aileron",
+    "samples": 207,
+    "duration_s": 81.21,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-14-34-20_1_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 175,
+    "duration_s": 66.42,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj",
+    "type": "Aileron",
+    "samples": 410,
+    "duration_s": 161.75,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-14-37-22_1_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 189,
+    "duration_s": 72.1,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+    "type": "Aileron",
+    "samples": 376,
+    "duration_s": 144.92,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure",
+    "type": "Aileron",
+    "samples": 251,
+    "duration_s": 95.97,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-15-52-12_1_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 227,
+    "duration_s": 89.08,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-15-52-12_2_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 122,
+    "duration_s": 47.74,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 174,
+    "duration_s": 66.27,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 291,
+    "duration_s": 112.62,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 233,
+    "duration_s": 91.69,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 300,
+    "duration_s": 116.08,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 313,
+    "duration_s": 122.24,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 291,
+    "duration_s": 114.35,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 298,
+    "duration_s": 117.43,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 277,
+    "duration_s": 108.73,
+    "hz": 2.5,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj",
+    "type": "Engine",
+    "samples": 304,
+    "duration_s": 116.36,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  },
+  {
+    "flight": "carbonZ_2018-10-18-11-08-24_no_failure",
+    "type": "Healthy / Normal",
+    "samples": 67,
+    "duration_s": 25.84,
+    "hz": 2.6,
+    "fail_onset_s": "N/A"
+  }
+]
