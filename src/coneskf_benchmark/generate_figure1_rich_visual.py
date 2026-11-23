@@ -22,8 +22,6 @@ from mpl_toolkits.mplot3d import Axes3D
 RESULTS_DIR = "/home/jarvis/coneskf_fdi_ws/results"
 PLOTS_DIR = os.path.join(RESULTS_DIR, "figures")
 os.makedirs(PLOTS_DIR, exist_ok=True)
-PAPER_FIGS_DIR = "/home/jarvis/coneskf_fdi_ws/paper/figures"
-os.makedirs(PAPER_FIGS_DIR, exist_ok=True)
 ARTIFACT_DIR = "/home/jarvis/.gemini/antigravity/brain/eab93cba-b1b0-41f1-870b-d750b1d3b20d"
 
 # Graphical Figure Colors (Reserved strictly for visual plots and diagrams)
@@ -419,23 +417,18 @@ def create_rich_figure1():
     # 3. Filter estimate to Certified Pose Tube (Generous 5.0 gap: x in [47.5, 52.5])
     draw_h_arrow(ax, 47.5, 52.5, 31.5, text=r"$\hat{\mathbf{p}}_k, \mathbf{P}_k$", text_offset_y=1.4, fs=5.8)
 
-    # Save to all destination directories
+    # Save to destination directories
     pdf_path = os.path.join(PLOTS_DIR, "fig1_coneskf_architecture.pdf")
     png_path = os.path.join(PLOTS_DIR, "fig1_coneskf_architecture.png")
-    paper_pdf = os.path.join(PAPER_FIGS_DIR, "fig1_coneskf_architecture.pdf")
-    paper_png = os.path.join(PAPER_FIGS_DIR, "fig1_coneskf_architecture.png")
     art_pdf = os.path.join(ARTIFACT_DIR, "fig1_coneskf_architecture.pdf")
     art_png = os.path.join(ARTIFACT_DIR, "fig1_coneskf_architecture.png")
 
     plt.savefig(pdf_path, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(png_path, bbox_inches='tight', pad_inches=0.15)
-    plt.savefig(paper_pdf, bbox_inches='tight', pad_inches=0.15)
-    plt.savefig(paper_png, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(art_pdf, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(art_png, bbox_inches='tight', pad_inches=0.15)
     plt.close()
     print(f"  Successfully Generated: {pdf_path}")
-    print(f"  Synced to Paper Directory: {paper_pdf}")
     print(f"  Synced to Artifact Directory: {art_pdf}")
 
 if __name__ == "__main__":

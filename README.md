@@ -3,7 +3,7 @@
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 [![C++](https://img.shields.io/badge/C%2B%2B-17-green.svg)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3.10-yellow.svg)](https://www.python.org/)
-[![Paper](https://img.shields.io/badge/Paper-10%20Pages%20IEEE-red.svg)](paper/coneskf_fdi_manuscript.pdf)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/Vishal442005/ConESKF-FDI/releases/tag/v1.0.0)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 Official open-source research and reproduction repository for **ConESKF-FDI**, a distribution-free state estimation and fault detection, isolation, and recovery (FDIR) framework for autonomous unmanned aerial vehicles (UAVs) navigating under heavy-tailed non-line-of-sight (NLoS) multipath, stealth GPS spoofing, and physical actuator failures.
@@ -63,11 +63,6 @@ coneskf_fdi_ws/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-├── paper/
-│   ├── coneskf_fdi_manuscript.tex    # 10-page IEEE Transactions LaTeX source
-│   ├── coneskf_fdi_manuscript.pdf    # Camera-ready PDF (10 pages, 0 overfull warnings)
-│   ├── figures/                      # Publication figures (PDF & 300 DPI PNG)
-│   └── tables/                       # LaTeX benchmark tables (Table I, II, III)
 ├── src/
 │   ├── coneskf_core/                 # High-speed C++ ROS 2 Humble node & library
 │   │   ├── include/coneskf_core/     # SO(3) Lie kinematics, ACI-R filter, Martingale monitor
@@ -81,7 +76,7 @@ coneskf_fdi_ws/
 │   ├── euroc/                        # Extracted EuRoC MAV data (MH_01_imu.csv, etc.)
 │   └── alfa/                         # CMU ALFA telemetry manifest (47 flights)
 ├── results/
-│   ├── figures/                      # All 6 generated publication figures
+│   ├── figures/                      # All 6 generated publication figures (PDF & PNG)
 │   └── *.csv                         # Raw numerical benchmark output logs
 └── scripts/
     ├── reproduce_all.sh              # Master one-click end-to-end reproduction script
@@ -96,13 +91,13 @@ coneskf_fdi_ws/
 - **OS:** Ubuntu 22.04 LTS
 - **ROS 2:** Humble Hawksbill
 - **Build Tools:** `colcon`, `cmake` ($\geq 3.16$), `build-essential`
-- **Python:** 3.10+ with `numpy`, `scipy`, `matplotlib`, `pymupdf`
+- **Python:** 3.10+ with `numpy`, `scipy`, `matplotlib`
 
 ```bash
 sudo apt-get update && sudo apt-get install -y \
   ros-humble-desktop \
   python3-colcon-common-extensions \
-  python3-pip texlive-full
+  python3-pip
 pip3 install -r requirements.txt
 ```
 
@@ -122,8 +117,7 @@ chmod +x scripts/reproduce_all.sh
 This single command:
 1. Executes the EuRoC MAV `MH_01_easy` 37,716-tick comparative benchmark across all 6 estimators (B1–B6).
 2. Executes the CMU ALFA 47-flight anomaly detection benchmark.
-3. Generates all 6 publication-grade figures in vector PDF and 300 DPI PNG formats.
-4. Recompiles the 10-page IEEE Transactions LaTeX manuscript (`paper/coneskf_fdi_manuscript.pdf`).
+3. Generates all 6 publication-grade figures in vector PDF and 300 DPI PNG formats in `results/figures/`.
 
 ---
 

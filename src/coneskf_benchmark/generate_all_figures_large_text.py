@@ -36,12 +36,10 @@ COLOR_YELLOW    = "#E69F00"
 RESULTS_DIR = "/home/jarvis/coneskf_fdi_ws/results"
 PLOTS_DIR = os.path.join(RESULTS_DIR, "figures")
 os.makedirs(PLOTS_DIR, exist_ok=True)
-PAPER_FIGS_DIR = "/home/jarvis/coneskf_fdi_ws/paper/figures"
-os.makedirs(PAPER_FIGS_DIR, exist_ok=True)
 ARTIFACT_DIR = "/home/jarvis/.gemini/antigravity/brain/eab93cba-b1b0-41f1-870b-d750b1d3b20d"
 
 def save_figure(fig, basename, pad=0.15):
-    for d in [PLOTS_DIR, PAPER_FIGS_DIR, ARTIFACT_DIR]:
+    for d in [PLOTS_DIR, ARTIFACT_DIR]:
         os.makedirs(d, exist_ok=True)
         fig.savefig(os.path.join(d, f"{basename}.pdf"), bbox_inches='tight', pad_inches=pad)
         fig.savefig(os.path.join(d, f"{basename}.png"), bbox_inches='tight', pad_inches=pad)
@@ -350,15 +348,11 @@ def generate_figure_2():
 
     pdf_path = os.path.join(PLOTS_DIR, "fig2_euroc_trajectory_3d.pdf")
     png_path = os.path.join(PLOTS_DIR, "fig2_euroc_trajectory_3d.png")
-    paper_pdf = os.path.join(PAPER_FIGS_DIR, "fig2_euroc_trajectory_3d.pdf")
-    paper_png = os.path.join(PAPER_FIGS_DIR, "fig2_euroc_trajectory_3d.png")
     art_pdf = os.path.join(ARTIFACT_DIR, "fig2_euroc_trajectory_3d.pdf")
     art_png = os.path.join(ARTIFACT_DIR, "fig2_euroc_trajectory_3d.png")
 
     plt.savefig(pdf_path, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(png_path, bbox_inches='tight', pad_inches=0.15)
-    plt.savefig(paper_pdf, bbox_inches='tight', pad_inches=0.15)
-    plt.savefig(paper_png, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(art_pdf, bbox_inches='tight', pad_inches=0.15)
     plt.savefig(art_png, bbox_inches='tight', pad_inches=0.15)
     plt.close()
