@@ -343,7 +343,7 @@ def generate_figure_2():
     ax2.set_ylabel('Position Error / Tube Bound [m]', fontsize=8.5, labelpad=3)
     ax2.tick_params(labelsize=7.5)
     ax2.set_title('(b) Certified Tube vs. Standard Drift', pad=6, fontsize=8.8, fontweight='bold')
-    ax2.legend(loc='upper left', framealpha=0.9, fontsize=6.5)
+    ax2.legend(loc='upper left', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', fontsize=6.5)
     ax2.grid(True)
 
     pdf_path = os.path.join(PLOTS_DIR, "fig2_euroc_trajectory_3d.pdf")
@@ -408,9 +408,9 @@ def generate_figure_3():
     axes[2].set_ylabel('Monitor Stat', fontsize=8.8)
     axes[2].tick_params(labelsize=8.0)
     axes[2].set_title('(c) Sequential Integrity Statistics: Exponential Wealth vs Sluggish CUSUM', loc='left', pad=4, fontsize=9.2, fontweight='bold')
-    axes[2].legend(loc='upper left', framealpha=0.9, ncol=2, fontsize=7.2, columnspacing=0.8)
+    axes[2].legend(loc='upper right', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', ncol=2, fontsize=7.0, columnspacing=0.8)
     axes[2].grid(True)
-    axes[2].set_ylim([-0.5, 3.6])
+    axes[2].set_ylim([-0.5, 4.9])
 
     # Panel (d): Trajectory Error Divergence vs Recovery
     axes[3].plot(t, b1_err, color=COLOR_VERMILION, linestyle=':', linewidth=1.7, label=r'B1 ($\chi^2$ ESKF - Trajectory Flyaway)')
@@ -421,7 +421,7 @@ def generate_figure_3():
     axes[3].set_ylabel('ATE RMSE [m]', fontsize=8.8)
     axes[3].tick_params(labelsize=8.0)
     axes[3].set_title('(d) Trajectory Error: Safe Fallback to Secondary Aiding (UWB/Flow)', loc='left', pad=4, fontsize=9.2, fontweight='bold')
-    axes[3].legend(loc='upper left', framealpha=0.9, fontsize=7.6)
+    axes[3].legend(loc='upper left', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', fontsize=7.4)
     axes[3].grid(True)
     axes[3].set_xlim([15.0, 75.0])
     axes[3].set_ylim([0.0, 7.8])
@@ -524,7 +524,7 @@ def generate_figure_5():
     fig, axes = plt.subplots(1, 3, figsize=(7.16, 2.7))
     fig.subplots_adjust(left=0.08, right=0.98, bottom=0.20, top=0.88, wspace=0.38)
 
-    # Panel (a): Peak Wealth Distribution (Clean rotated labels to guarantee ZERO collisions)
+    # Panel (a): Peak Wealth Distribution (Clean 2-line horizontal labels, ZERO collisions)
     box_data_w = [wealth_healthy, wealth_engine, wealth_aileron, wealth_elevator, wealth_rudder]
     labels_w = ["Healthy\n(11)", "Engine\n(23)", "Aileron\n(8)", "Elevator\n(2)", "Rudder\n(3)"]
     bp = axes[0].boxplot(box_data_w, tick_labels=labels_w, patch_artist=True,
@@ -535,10 +535,11 @@ def generate_figure_5():
         patch.set_alpha(0.65)
     axes[0].axhline(25.0, color=COLOR_VERMILION, linestyle='--', linewidth=1.4, label=r'Threshold $1/\alpha=25$')
     axes[0].set_ylabel(r'Peak Martingale Wealth $M_{\max}$', fontsize=8.8)
-    axes[0].tick_params(axis='x', labelsize=7.2, rotation=12)
+    axes[0].tick_params(axis='x', labelsize=6.6, rotation=0)
     axes[0].tick_params(axis='y', labelsize=7.8)
+    axes[0].set_ylim([0.0, 34.0])
     axes[0].set_title(r'(a) Wealth Confinement ($H_0$)', pad=7, fontsize=8.8, fontweight='bold')
-    axes[0].legend(loc='upper right', framealpha=0.9, fontsize=6.8)
+    axes[0].legend(loc='upper right', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', fontsize=6.6)
     axes[0].grid(True, axis='y')
 
     # Panel (b): Time-to-Detect (TTD)
@@ -565,8 +566,9 @@ def generate_figure_5():
     axes[2].set_ylabel('Flight Count', fontsize=8.8)
     axes[2].tick_params(labelsize=7.8)
     axes[2].set_title('(c) Computational Speed', pad=7, fontsize=8.8, fontweight='bold')
-    axes[2].set_xlim([0, 45])
-    axes[2].legend(loc='upper left', framealpha=0.9, fontsize=6.8)
+    axes[2].set_xlim([0, 44])
+    axes[2].set_ylim([0, 23])
+    axes[2].legend(loc='upper left', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', fontsize=6.6)
     axes[2].grid(True)
 
     save_figure(fig, "fig5_alfa_anomaly_boxplots", pad=0.18)
@@ -594,9 +596,12 @@ def generate_figure_6():
 
     ax_a2 = ax_a1.twinx()
     l2 = ax_a2.plot(eps_vals, wealth_h0, color=COLOR_VERMILION, marker='s', markersize=4, linestyle='--', linewidth=1.5, label=r'Peak $M_{H_0}$')
-    ax_a2.axhline(25.0, color=COLOR_PURPLE, linestyle=':', linewidth=1.2)
+    l3 = [ax_a2.axhline(25.0, color=COLOR_PURPLE, linestyle=':', linewidth=1.2, label=r'Threshold $1/\alpha$')]
     ax_a2.set_ylabel(r'Max $H_0$ Wealth', color=COLOR_VERMILION, fontsize=8.0, labelpad=2)
     ax_a2.tick_params(axis='y', labelcolor=COLOR_VERMILION, labelsize=7.8)
+    lines_a = l1 + l2 + l3
+    labels_a = [l.get_label() for l in lines_a]
+    ax_a1.legend(lines_a, labels_a, loc='center right', framealpha=0.96, facecolor='white', edgecolor='#CCCCCC', fontsize=6.0)
     ax_a1.set_title(r'(a) Betting Sensitivity $\epsilon_{\mathrm{bet}}$', pad=7, fontsize=8.8, fontweight='bold')
     ax_a1.grid(True)
 

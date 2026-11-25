@@ -37,7 +37,7 @@ To archive this release on Zenodo and receive a permanent Digital Object Identif
 
 ```bibtex
 @article{coneskf_fdi_2026,
-  author    = {Autonomous UAV Research Group},
+  author    = {Chandel, Vishal},
   title     = {Distribution-Free Adaptive Conformal Error-State Kalman Filtering and Anytime-Valid Martingale Isolation for GPS-Denied and Spoofed UAV Navigation},
   journal   = {IEEE Transactions on Instrumentation and Measurement},
   year      = {2026},

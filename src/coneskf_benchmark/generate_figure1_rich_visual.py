@@ -208,34 +208,34 @@ def create_rich_figure1():
 
     # FIGURE: Correlated Innovation Ellipse -> Cholesky Transform -> Isotropic Whitened Sphere
     # 1. Correlated Ellipse (Colors inside figure)
-    ell_cx, ell_cy = 35.2, 63.2
-    ell_raw = patches.Ellipse((ell_cx, ell_cy), 4.6, 2.2, angle=35, facecolor='#FBE8EB', edgecolor=FIG_COLOR_VERMILION, linewidth=1.2, zorder=3)
+    ell_cx, ell_cy = 34.6, 62.6
+    ell_raw = patches.Ellipse((ell_cx, ell_cy), 4.4, 2.1, angle=35, facecolor='#FBE8EB', edgecolor=FIG_COLOR_VERMILION, linewidth=1.2, zorder=3)
     ax.add_patch(ell_raw)
-    ax.annotate('', xy=(ell_cx + 1.4, ell_cy + 0.9), xytext=(ell_cx, ell_cy),
+    ax.annotate('', xy=(ell_cx + 1.3, ell_cy + 0.8), xytext=(ell_cx, ell_cy),
                 arrowprops=dict(arrowstyle="->", color=FIG_COLOR_DARK_RED, lw=1.2), zorder=4)
     # Label cleanly ABOVE ellipse (never overlapping)
-    ax.text(ell_cx, ell_cy + 2.0, r"Raw $\boldsymbol{\nu}_k \sim \mathbf{S}_k$", ha='center', va='bottom', fontsize=5.4, fontweight='bold', color=TEXT_BLACK, zorder=4)
+    ax.text(ell_cx, ell_cy + 2.2, r"Raw $\boldsymbol{\nu}_k \sim \mathbf{S}_k$", ha='center', va='bottom', fontsize=5.2, fontweight='bold', color=TEXT_BLACK, zorder=4)
 
     # 2. Cholesky Factor Arrow (Colors inside figure)
-    ax.annotate('', xy=(41.8, ell_cy), xytext=(38.5, ell_cy),
+    ax.annotate('', xy=(41.4, ell_cy), xytext=(37.8, ell_cy),
                 arrowprops=dict(arrowstyle="->", color=FIG_COLOR_PURPLE, lw=1.4), zorder=5)
-    ax.text(40.15, ell_cy + 1.3, r"$\mathbf{L}_k^{-1}$", ha='center', va='bottom', fontsize=6.2, fontweight='bold', color=FIG_COLOR_PURPLE, zorder=5)
+    ax.text(39.6, ell_cy + 0.9, r"$\mathbf{L}_k^{-1}$", ha='center', va='bottom', fontsize=6.0, fontweight='bold', color=FIG_COLOR_PURPLE, zorder=5)
 
     # 3. Whitened Sphere (Colors inside figure)
-    sph_cx, sph_cy = 45.2, ell_cy
-    sph_white = patches.Circle((sph_cx, sph_cy), 1.8, facecolor='#EBF5FB', edgecolor=FIG_COLOR_BLUE, linewidth=1.2, zorder=3)
+    sph_cx, sph_cy = 44.8, ell_cy
+    sph_white = patches.Circle((sph_cx, sph_cy), 1.75, facecolor='#EBF5FB', edgecolor=FIG_COLOR_BLUE, linewidth=1.2, zorder=3)
     ax.add_patch(sph_white)
-    ax.annotate('', xy=(sph_cx + 1.2, sph_cy + 0.8), xytext=(sph_cx, sph_cy),
+    ax.annotate('', xy=(sph_cx + 1.1, sph_cy + 0.75), xytext=(sph_cx, sph_cy),
                 arrowprops=dict(arrowstyle="->", color=FIG_COLOR_BLUE, lw=1.2), zorder=4)
     # Label cleanly ABOVE circle (never overlapping)
-    ax.text(sph_cx, sph_cy + 2.0, r"Whitened $\mathbf{L}_k^{-1} \boldsymbol{\nu}_k$", ha='center', va='bottom', fontsize=5.4, fontweight='bold', color=TEXT_BLACK, zorder=4)
+    ax.text(sph_cx, ell_cy + 2.2, r"Whitened $\mathbf{L}_k^{-1} \boldsymbol{\nu}_k$", ha='center', va='bottom', fontsize=5.2, fontweight='bold', color=TEXT_BLACK, zorder=4)
 
     # Nonconformity score definition: ALL BLACK TEXT
-    ax.text(55.6, 67.5, r"$\mathbf{S}_k = \mathbf{L}_k \mathbf{L}_k^T$", ha='center', va='center', fontsize=5.8, color=TEXT_BLACK, zorder=3)
-    ax.text(55.6, 64.2, r"$s_k = \|\mathbf{L}_k^{-1} \boldsymbol{\nu}_k\|_2$", ha='center', va='center', fontsize=6.6, fontweight='bold', color=TEXT_BLACK, zorder=3)
-    ax.text(55.6, 60.8, r"Distribution-Free", ha='center', va='center', fontsize=5.4, fontstyle='italic', color=TEXT_BLACK, zorder=3)
-    ax.text(55.6, 57.5, r"Window $\mathcal{H}_k$ ($N=50$)", ha='center', va='center', fontsize=5.4, fontweight='bold', color=TEXT_BLACK, zorder=3)
-    ax.text(55.6, 54.6, r"Conformal Calibration", ha='center', va='center', fontsize=5.2, color=TEXT_BLACK, zorder=3)
+    ax.text(56.2, 67.5, r"$\mathbf{S}_k = \mathbf{L}_k \mathbf{L}_k^T$", ha='center', va='center', fontsize=5.6, color=TEXT_BLACK, zorder=3)
+    ax.text(56.2, 64.2, r"$s_k = \|\mathbf{L}_k^{-1} \boldsymbol{\nu}_k\|_2$", ha='center', va='center', fontsize=6.4, fontweight='bold', color=TEXT_BLACK, zorder=3)
+    ax.text(56.2, 60.8, r"Distribution-Free", ha='center', va='center', fontsize=5.3, fontstyle='italic', color=TEXT_BLACK, zorder=3)
+    ax.text(56.2, 57.5, r"Window $\mathcal{H}_k$ ($N=50$)", ha='center', va='center', fontsize=5.3, fontweight='bold', color=TEXT_BLACK, zorder=3)
+    ax.text(56.2, 54.6, r"Conformal Calibration", ha='center', va='center', fontsize=5.1, color=TEXT_BLACK, zorder=3)
 
     # Connections from Container 1 to Container 2 (Generous 4.5 gap: x in [26.5, 31.0])
     draw_h_arrow(ax, 26.5, 31.0, 84.6, text=r"$\mathbf{a}, \boldsymbol{\omega}$", text_offset_y=1.4, fs=5.6)
@@ -296,23 +296,23 @@ def create_rich_figure1():
     draw_container(ax, 1.5, 1.5, 46.0, 44.0, "4. Adaptive ACI-R Filtering")
 
     # Formula Box (White bg, neutral border)
-    box_acir_formula = patches.FancyBboxPatch((2.5, 23.5), 44.0, 16.5, boxstyle="round,pad=0.1,rounding_size=0.8",
+    box_acir_formula = patches.FancyBboxPatch((2.5, 25.0), 44.0, 15.0, boxstyle="round,pad=0.1,rounding_size=0.8",
                                              facecolor=BOX_BG, edgecolor=BOX_BORDER_LIGHT, linewidth=0.9, zorder=2)
     ax.add_patch(box_acir_formula)
     ax.text(24.5, 37.8, "Closed-Form ACI-R Covariance Inflation Function", ha='center', va='center', fontsize=6.8, fontweight='bold', color=TEXT_BLACK, zorder=3)
-    ax.text(24.5, 33.2, r"$\phi_k = 1.0\ (s_k \leq \hat{q}_{10\%}) \quad \mid \quad 1.0 + \kappa \left( \frac{s_k - \hat{q}_{10\%}}{\hat{q}_{1\%} - \hat{q}_{10\%}} \right)^2 \quad \mid \quad \infty\ (\mathrm{Reject})$", ha='center', va='center', fontsize=5.8, color=TEXT_BLACK, zorder=3)
-    ax.text(24.5, 28.5, r"Inflated:  $\tilde{\mathbf{R}}_k = \phi_k \mathbf{R}_k \quad \Rightarrow \quad \mathbf{K}_k(\phi_k) \to \mathbf{0}\ \mathrm{as}\ \|\boldsymbol{\nu}_k\| \to \infty$", ha='center', va='center', fontsize=5.8, fontweight='bold', color=TEXT_BLACK, zorder=3)
+    ax.text(24.5, 33.0, r"$\phi_k = 1.0\ (s_k \leq \hat{q}_{10\%}) \quad \mid \quad 1.0 + \kappa \left( \frac{s_k - \hat{q}_{10\%}}{\hat{q}_{1\%} - \hat{q}_{10\%}} \right)^2 \quad \mid \quad \infty\ (\mathrm{Reject})$", ha='center', va='center', fontsize=5.8, color=TEXT_BLACK, zorder=3)
+    ax.text(24.5, 28.0, r"Inflated:  $\tilde{\mathbf{R}}_k = \phi_k \mathbf{R}_k \quad \Rightarrow \quad \mathbf{K}_k(\phi_k) \to \mathbf{0}\ \mathrm{as}\ \|\boldsymbol{\nu}_k\| \to \infty$", ha='center', va='center', fontsize=5.8, fontweight='bold', color=TEXT_BLACK, zorder=3)
 
     # Visual Annotation: 3 Non-Overlapping Zone Badges (White bg, thin neutral border, BLACK TEXT)
-    ax.text(9.5, 22.0, "Zone I: Nominal\n$s \\leq \\hat{q}_{10}$", ha='center', va='center', fontsize=5.4, color=TEXT_BLACK, fontweight='bold',
+    ax.text(9.5, 21.8, "Zone I: Nominal\n$s \\leq \\hat{q}_{10}$", ha='center', va='center', fontsize=5.2, color=TEXT_BLACK, fontweight='bold',
             bbox=dict(boxstyle="round,pad=0.16", facecolor='#FFFFFF', edgecolor='#666666', linewidth=0.6), zorder=4)
-    ax.text(24.5, 22.0, "Zone II: Inflation\n$\\hat{q}_{10} < s \\leq \\hat{q}_1$", ha='center', va='center', fontsize=5.4, color=TEXT_BLACK, fontweight='bold',
+    ax.text(24.5, 21.8, "Zone II: Inflation\n$\\hat{q}_{10} < s \\leq \\hat{q}_1$", ha='center', va='center', fontsize=5.2, color=TEXT_BLACK, fontweight='bold',
             bbox=dict(boxstyle="round,pad=0.16", facecolor='#FFFFFF', edgecolor='#666666', linewidth=0.6), zorder=4)
-    ax.text(39.5, 22.0, "Zone III: Reject\n$s > \\hat{q}_1 \\Rightarrow \\phi = \\infty$", ha='center', va='center', fontsize=5.4, color=TEXT_BLACK, fontweight='bold',
+    ax.text(39.5, 21.8, "Zone III: Reject\n$s > \\hat{q}_1 \\Rightarrow \\phi = \\infty$", ha='center', va='center', fontsize=5.2, color=TEXT_BLACK, fontweight='bold',
             bbox=dict(boxstyle="round,pad=0.16", facecolor='#FFFFFF', edgecolor='#666666', linewidth=0.6), zorder=4)
 
     # Inset Axes for ACI-R Influence Curve (Padded with 8.0 margin on left so y-label never touches border!)
-    ax_acir = fig.add_axes([0.095, 0.055, 0.365, 0.138])
+    ax_acir = fig.add_axes([0.095, 0.048, 0.365, 0.138])
     s_grid = np.linspace(0, 6, 200)
     psi_lin = s_grid
     psi_hub = np.where(s_grid <= 1.345, s_grid, 1.345)
@@ -373,10 +373,11 @@ def create_rich_figure1():
     ax.scatter([61.0], [12.5 + 1.1 * np.sin((61.0 - 54.5) / 15.0 * np.pi)], color=FIG_COLOR_GREEN, s=25, zorder=6)
 
     # Obstacle / Geo-fence boundary
-    obs_x = [67.5, 71.5, 71.5, 67.5]
-    obs_y = [15.5, 15.5, 18.5, 18.5]
+    obs_x = [67.2, 72.0, 72.0, 67.2]
+    obs_y = [15.4, 15.4, 18.8, 18.8]
     ax.add_patch(patches.Polygon(list(zip(obs_x, obs_y)), closed=True, facecolor='#FBE8EB', edgecolor=FIG_COLOR_DARK_RED, linewidth=1.1, hatch='//', zorder=4))
-    ax.text(69.5, 17.0, "Hazard\nZone", ha='center', va='center', fontsize=4.8, fontweight='bold', color=FIG_COLOR_DARK_RED, zorder=5)
+    ax.text(69.6, 17.1, "Hazard\nZone", ha='center', va='center', fontsize=4.6, fontweight='bold', color=FIG_COLOR_DARK_RED,
+            bbox=dict(boxstyle="round,pad=0.12", facecolor='#FFFFFF', edgecolor='none', alpha=0.88), zorder=5)
 
     # Explanatory formula
     ax.text(63.75, 5.2, r"$\mathcal{C}_k \cap \mathcal{O} = \emptyset \Rightarrow \text{Guaranteed Safe}$", ha='center', va='center', fontsize=5.2, fontweight='bold', color=TEXT_BLACK, zorder=6)
@@ -386,7 +387,7 @@ def create_rich_figure1():
                                      facecolor=BOX_BG, edgecolor=BOX_BORDER_LIGHT, linewidth=0.8, zorder=2)
     ax.add_patch(box_3d)
 
-    ax_tube = fig.add_axes([0.765, 0.050, 0.205, 0.145], projection='3d')
+    ax_tube = fig.add_axes([0.768, 0.046, 0.200, 0.152], projection='3d')
     u = np.linspace(0, 2 * np.pi, 20)
     v = np.linspace(0, np.pi, 10)
     rx, ry, rz = 1.2, 0.8, 0.5
@@ -400,18 +401,21 @@ def create_rich_figure1():
     ax_tube.set_xlim([-1.5, 1.5])
     ax_tube.set_ylim([-1.5, 1.5])
     ax_tube.set_zlim([-1.0, 1.0])
-    ax_tube.set_xlabel('X', labelpad=-13, fontsize=5.2, color=TEXT_BLACK)
-    ax_tube.set_ylabel('Y', labelpad=-13, fontsize=5.2, color=TEXT_BLACK)
-    ax_tube.set_zlabel('Z', labelpad=-13, fontsize=5.2, color=TEXT_BLACK)
-    ax_tube.tick_params(labelsize=4.8, pad=-5, colors=TEXT_BLACK)
-    ax_tube.view_init(elev=20, azim=45)
-    ax_tube.legend(loc='upper right', framealpha=0.9, fontsize=4.8)
+    ax_tube.set_xticks([-1, 0, 1])
+    ax_tube.set_yticks([-1, 0, 1])
+    ax_tube.set_zticks([-1, 0, 1])
+    ax_tube.set_xlabel('X', labelpad=-10, fontsize=5.0, color=TEXT_BLACK)
+    ax_tube.set_ylabel('Y', labelpad=-10, fontsize=5.0, color=TEXT_BLACK)
+    ax_tube.set_zlabel('Z', labelpad=-10, fontsize=5.0, color=TEXT_BLACK)
+    ax_tube.tick_params(labelsize=4.4, pad=-3, colors=TEXT_BLACK)
+    ax_tube.view_init(elev=22, azim=42)
+    ax_tube.legend(loc='upper right', framealpha=0.95, fontsize=4.6)
 
     # ==========================================================================
     # INTER-CONTAINER ARROWS (Routed in open corridors)
     # ==========================================================================
     # 1. Whitening s_k score down to Container 4 (diagonal in 6.0 vertical gap)
-    draw_arrow(ax, 47.5, 51.5, 24.5, 45.5, text="s_k Score", text_pos=0.5, rad=0.06, fs=5.6)
+    draw_arrow(ax, 47.5, 51.5, 24.5, 45.5, text=r"$s_k$ Score", text_pos=0.5, rad=0.06, fs=5.6)
     # 2. Martingale Quarantine Trigger signal to Filter / Isolation
     draw_arrow(ax, 74.0, 51.5, 41.5, 45.5, text="Quarantine Trigger", text_pos=0.48, rad=-0.06, fs=5.6)
     # 3. Filter estimate to Certified Pose Tube (Generous 5.0 gap: x in [47.5, 52.5])
