@@ -4,7 +4,7 @@
   <name>coneskf_msgs</name>
   <version>1.0.0</version>
   <description>Custom ROS 2 message definitions for ConESKF-FDI certified pose and fault isolation.</description>
-  <maintainer email="jarvis@antigravity.ai">Jarvis</maintainer>
+  <maintainer email="chandelvishal445@gmail.com">Vishal Chandel</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

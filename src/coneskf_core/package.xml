@@ -4,7 +4,7 @@
   <name>coneskf_core</name>
   <version>1.0.0</version>
   <description>C++17 15-state SO(3) Error-State Kalman Filter with Online Conformal Inference and Betting Martingale Fault Isolation.</description>
-  <maintainer email="jarvis@antigravity.ai">Jarvis</maintainer>
+  <maintainer email="chandelvishal445@gmail.com">Vishal Chandel</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
